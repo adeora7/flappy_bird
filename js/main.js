@@ -10,7 +10,7 @@ var bird = {
 	yVelocity : 0,
 	yAcceleration: -1.7,
 	draw : function(){
-		rect(this.x, this.y, this.width, this.height);
+		image(image_bird, this.x, this.y, this.width, this.height);
 	},
 	update : function(){
 		this.yVelocity = this.yVelocity + 0.5*this.yAcceleration;
@@ -59,8 +59,9 @@ function collision(bird, obstacle){
 }
 
 //p5js functions
+var image_bird;
 function preload(){
-
+	image_bird = loadImage("images/bird.png")
 }
 function setup(){
 	createCanvas(canvasWidth, canvasHeight);
