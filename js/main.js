@@ -86,7 +86,9 @@ function draw(){
 
 	obstacles.forEach(function(obstacle){
 		if(collision(bird, obstacle)){
-			score = 0;
+			noLoop();
+			textSize(40);
+			text("GAME OVER", 180, 200);
 		}
 	});
 }
