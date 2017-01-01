@@ -54,7 +54,7 @@ setInterval(function(){
 }, 2000);
 //collision detection function
 function collision(bird, obstacle){
-	return (bird.y < obstacle.slit || bird.y > obstacle.slit + obstacle.slitHeight) && 
+	return (bird.y <= obstacle.slit || bird.y + bird.width >= obstacle.slit + obstacle.slitHeight) && 
 		bird.x + bird.width >= obstacle.x && bird.x <= obstacle.x + obstacle.width;
 }
 
